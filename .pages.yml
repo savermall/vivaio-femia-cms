@@ -57,7 +57,7 @@ content:
   - name: pagine
     label: Pagine
     type: collection
-    path: pagine
+    path: _pagine
     fields:
       - name: title
         label: Titolo
