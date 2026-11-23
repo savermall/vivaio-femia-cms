@@ -1,0 +1,71 @@
+media:
+  input: img
+  output: /img
+content:
+  - name: prodotti
+    label: Prodotti
+    type: collection
+    path: _products
+    view:
+      primary: title
+      sort: order
+    fields:
+      - name: title
+        label: Nome
+        type: string
+        required: true
+      - name: tag
+        label: Stagione
+        type: string
+      - name: description
+        label: Descrizione breve
+        type: text
+      - name: image
+        label: Foto
+        type: image
+      - name: alt
+        label: Testo alternativo
+        type: string
+      - name: order
+        label: Ordine
+        type: number
+      - name: body
+        label: Descrizione estesa
+        type: rich-text
+  - name: articoli
+    label: Articoli
+    type: collection
+    path: _articoli
+    view:
+      primary: title
+      sort: date
+      order: desc
+    fields:
+      - name: title
+        label: Titolo
+        type: string
+        required: true
+      - name: date
+        label: Data
+        type: date
+      - name: cover
+        label: Immagine di copertina
+        type: image
+      - name: body
+        label: Testo
+        type: rich-text
+  - name: pagine
+    label: Pagine
+    type: collection
+    path: pagine
+    fields:
+      - name: title
+        label: Titolo
+        type: string
+        required: true
+      - name: description
+        label: Descrizione
+        type: text
+      - name: body
+        label: Contenuto
+        type: rich-text

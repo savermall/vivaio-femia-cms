@@ -1,0 +1,27 @@
+---
+layout: default
+title: "Articoli e novità — Femia Domenico"
+description: "Notizie, stagioni e novità dal vivaio Femia Domenico a Marina di Gioiosa Jonica."
+---
+<section style="padding:80px 0">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Dal vivaio</span>
+      <h2>Articoli e novità.</h2>
+      <p>Cosa succede in vivaio, stagione per stagione.</p>
+    </div>
+    <div class="cards">
+      {% assign articoli = site.articoli | sort: "date" | reverse %}
+      {% for a in articoli %}
+      <article class="card">
+        {% if a.cover %}<div class="card-img"><img src="{{ a.cover }}" alt="{{ a.title }}" loading="lazy"></div>{% endif %}
+        <div class="card-body">
+          <span class="tag">{{ a.date | date: "%d/%m/%Y" }}</span>
+          <h3><a href="{{ a.url }}" style="text-decoration:none;color:inherit">{{ a.title }}</a></h3>
+          <p>{{ a.content | strip_html | truncate: 110 }}</p>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

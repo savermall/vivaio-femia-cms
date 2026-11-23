@@ -1,0 +1,21 @@
+title: "Femia Domenico"
+description: "Vivaio a Marina di Gioiosa Jonica: piante da fiore, crisantemi, stelle di Natale, ciclamini, ulivi, arredo giardini, movimento terra e noleggio piante per eventi."
+url: "https://savermall.github.io/vivaio-femia-cms"
+baseurl: ""
+exclude: [README.md]
+collections:
+  products:
+    output: false
+  articoli:
+    output: true
+    permalink: /articoli/:name/
+  pagine:
+    output: true
+    permalink: /:name/
+defaults:
+  - scope: {path: "", type: "pages"}
+    values: {layout: default}
+  - scope: {path: "", type: "articoli"}
+    values: {layout: articolo}
+  - scope: {path: "", type: "pagine"}
+    values: {layout: pagina}

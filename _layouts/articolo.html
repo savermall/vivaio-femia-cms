@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<article style="padding:72px 0">
+  <div class="wrap" style="max-width:760px">
+    <span class="eyebrow">Articolo</span>
+    <h1 style="font-size:clamp(32px,4vw,48px);line-height:1.1;margin:12px 0 8px">{{ page.title }}</h1>
+    <p style="color:var(--muto);font-size:14px">{{ page.date | date: "%d/%m/%Y" }}</p>
+    {% if page.cover %}<img src="{{ page.cover }}" alt="{{ page.title }}" style="border-radius:20px;margin:26px 0;width:100%;height:auto">{% endif %}
+    <div class="prose">{{ content }}</div>
+    <p style="margin-top:40px"><a href="/articoli/">← Tutti gli articoli</a></p>
+  </div>
+</article>
+<style>.prose p{margin:0 0 18px}.prose h2{font-size:28px;margin:34px 0 12px}.prose h3{font-size:22px;margin:28px 0 10px}.prose img{border-radius:16px;margin:20px 0;height:auto}</style>
